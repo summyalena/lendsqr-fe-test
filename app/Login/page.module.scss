@@ -1,26 +1,49 @@
-$secondary-color: var(--secondary-color);
-$dark-color: var(--dark-color);
+$quartenary-color: var(--quaternary-color);
+$text-color: var(--text-color);
 $bold: var(--bold);
+$secondary-color: var(--secondary-color);
 $heading-font: var(--heading-font);
+$primary-color: var(--primary-color);
+$regular: var(--regular);
 
 .signIn {
   height: 100vh;
 }
 
+.logo {
+  padding: 4rem;
+  width: 100%;
+  justify-content: space-between;
+
+  svg {
+    margin-left: 0.5rem;
+  }
+}
+
 .authWrapper {
-  padding: 48px;
-  max-width: 558px;
-  border-radius: 24px;
-  background: $secondary-color;
-  box-shadow: 0px 2px 8px 0px #231f2014;
+  height: 100%;
+  // align-items: center;
+  justify-content: center;
+  gap: 3rem;
+
+  img {
+    display: none;
+  }
 
   h1 {
-    line-height: 24px;
-    text-align: center;
+    line-height: 54px;
+    font-size: 40px;
     margin-bottom: 24px;
     font-weight: $bold;
-    color: $dark-color;
+    color: $primary-color;
     font-family: $heading-font;
+  }
+
+  p {
+    font-weight: $regular;
+    font-size: 20px;
+    line-height: 27.32px;
+    color: $text-color;
   }
 }
 
@@ -31,6 +54,14 @@ $heading-font: var(--heading-font);
     margin-top: 4px;
     padding: 12px 24px;
     color: $secondary-color;
-    background: $dark-color;
+    background: $quartenary-color;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .authWrapper {
+    img {
+      display:flex;
+    }
   }
 }
