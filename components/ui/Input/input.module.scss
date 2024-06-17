@@ -1,0 +1,74 @@
+.inputField {
+  input {
+    width: 100%;
+    font-size: 12px;
+    padding: 12px 8px;
+    border-radius: 12px;
+    font-weight: var(--font-medium);
+
+    &:focus {
+      outline: none;
+      border: 1.5px solid var(--primary-color);
+    }
+
+    &::placeholder {
+      font-size: 12px;
+      font-family: inherit;
+    }
+  }
+
+  label {
+    display: none;
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+}
+
+.textField {
+  textarea {
+    width: 100%;
+    font-size: 12px;
+    padding: 12px 8px;
+    border-radius: 12px;
+    font-weight: var(--font-medium);
+    resize: none;
+    display: block;
+
+    &:focus {
+      outline: none;
+      border: 1.5px solid var(--primary-color);
+    }
+
+    &::placeholder {
+      font-size: 12px;
+      font-family: inherit;
+    }
+  }
+
+  label {
+    font-size: 14px;
+    line-height: 19.6px;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.invalid {
+  gap: 8px;
+  font-size: 12px;
+  margin-top: 4px;
+  color: var(--danger-color);
+  font-family: var(--body-font);
+  font-weight: var(--font-medium);
+}
+
+.error {
+  border: 1.5px solid var(--danger-color);
+}
+
+.inputEditWrapper {
+  label {
+    font-size: 14px;
+    line-height: 19.6px;
+    margin-bottom: 0.5rem;
+  }
+}
