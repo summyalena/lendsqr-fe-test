@@ -4,11 +4,11 @@
     font-size: 12px;
     padding: 12px 8px;
     border-radius: 12px;
-    font-weight: var(--font-medium);
+    font-weight: var(--medium);
 
     &:focus {
       outline: none;
-      border: 1.5px solid var(--primary-color);
+      border: 1.5px solid var(--quinary-color);
     }
 
     &::placeholder {
@@ -30,13 +30,13 @@
     font-size: 12px;
     padding: 12px 8px;
     border-radius: 12px;
-    font-weight: var(--font-medium);
+    font-weight: var(--medium);
     resize: none;
     display: block;
 
     &:focus {
       outline: none;
-      border: 1.5px solid var(--primary-color);
+      border: 1.5px solid var(--quinary-color);
     }
 
     &::placeholder {
@@ -58,7 +58,7 @@
   margin-top: 4px;
   color: var(--danger-color);
   font-family: var(--body-font);
-  font-weight: var(--font-medium);
+  font-weight: var(--medium);
 }
 
 .error {
