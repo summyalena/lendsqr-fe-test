@@ -1,0 +1,78 @@
+.modal {
+  overflow: hidden;
+}
+
+.modalContent {
+  background: white;
+  padding: 20px;
+  border-radius: 4px;
+  max-width: 100%;
+  position: absolute; 
+  top: 0; 
+  left: 20%; 
+  box-shadow: 3px 5px 20px 0px #0000000A;
+  border: 1px solid #545F7D24;
+
+  p {
+    margin-bottom: 5px;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--senary-color);
+  }
+}
+
+
+.filterFields {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  option {
+    color: var(--senary-color);
+    font-size: 14px;
+    font-weight: var(--regular);
+  }
+}
+
+.filterFields input,
+.filterFields select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  color: var(--senary-color);
+}
+
+.filterFields input::placeholder {
+  color: var(--senary-color);
+}
+
+.modalButtons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 20px;
+
+  button {
+    padding: 10px 30px;
+    border: none;
+    border-radius: 8px;
+    border: 1px solid var(--senary-color);
+    cursor: pointer;
+  }
+  
+  button:first-of-type {
+    background-color: transparent;
+    color: var(--senary-color);
+    font-size: 14px;
+  }
+  
+  button:last-of-type {
+    background-color: #39cdcc;
+    color: white;
+    font-size: 14px;
+    border: 1px solid #39CDCC;
+  }
+}
+
+
