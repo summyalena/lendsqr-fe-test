@@ -1,16 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
   --primary-color: #213F7D; 
   --secondary-color: #ffffff;
   --text-color: #545F7D;
+  --text-color2: #213f7d;
   --nav-color: #888888;
   --quaternary-color: #39CDCC;
   --quinary-color: #db2b39;
-  --senary-color: #0d0d0d;
+  --senary-color: #545F7D;
   --danger-color: red;
 
   --body-bg: #fdfdfb;
 
-  --hover-color: #5364ba;
 
   --body-font: 'Inter', sans-serif;
 
@@ -20,6 +22,18 @@
   --bold: 700;
   --extra-bold: 800;
 }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Work Sans', sans-serif;
+}
+
+#__next {
+  height: 100%;
+}
+
 
 * {
   box-sizing: border-box;
