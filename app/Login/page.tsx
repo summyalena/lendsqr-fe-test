@@ -1,27 +1,28 @@
 'use client';
 
-import React, {useState} from 'react'
+import React, { useState } from 'react';
 
 import styles from './page.module.scss';
-import SignIn from './SignIn';
-import SignUp from './SignUp';
+import SignIn from './SignIn/SignIn';
+import SignUp from './SignUp/SignUp';
 import { LendsqrLogo } from '@/public/icons/icons';
+import LayoutWithAuth from '@/components/ui/LayoutWithAuth';
 
 function Login() {
-
   const [isSignIn, setIsSignIn] = useState(false);
   return (
+    <LayoutWithAuth>
     <section className={`flex flex-col full-width ${styles.signIn}`}>
       <span className={`container flex ${styles.logo}`}>
-        <LendsqrLogo/>
+        <LendsqrLogo />
         <span onClick={() => setIsSignIn(!isSignIn)}>
-          {isSignIn ? 'Sign Up' : 'Sign In'}
+          {isSignIn ? 'Sign In' : 'Sign Up'}
         </span>
       </span>
-      {isSignIn ? <SignIn /> : <SignUp />}
-    
-    </section>
-  )
+      {isSignIn ? <SignUp /> : <SignIn />}
+      </section>
+      </LayoutWithAuth>
+  );
 }
 
-export default Login
+export default Login;
