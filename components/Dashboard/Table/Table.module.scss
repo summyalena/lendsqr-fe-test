@@ -1,0 +1,195 @@
+
+.tableContainer {
+  width: 100%;
+  overflow-x: auto;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-top: 20px;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1000px;
+    box-shadow: 3px 5px 20px 0px #0000000A;
+    border: 1px solid #213F7D0F;
+    border-radius: 4px;
+
+    thead {
+      th {
+        padding: 15px 10px;
+        text-align: left;
+         font-family: 'Work Sans', sans-serif !important;
+        font-weight: var(--bold);
+        font-size: 12px;
+        color: var(--primary-color);
+        border-bottom: 1px solid #e0e0e0;
+      }
+
+      .tableHeader {
+        text-align: center;
+      }
+      
+      .headerContent {
+        display: flex;
+        align-items: center;
+      }
+      
+      .headerContent > svg {
+        margin-left: 8px; 
+      }
+    }
+    tbody {
+      tr {
+        &:nth-child(even) {
+          background-color: #fffdfd;
+        }
+
+        &:hover {
+          background-color: #f5f8fc;
+        }
+
+        td {
+          padding: 15px 10px;
+          border-bottom: 1px solid #e0e0e0;
+          color: var(--primary-color);
+          font-size: 14px;
+          font-weight: var(--regular);
+         font-family: 'Work Sans', sans-serif !important;
+
+          .status {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 12px;
+            font-size: 0.875em;
+            font-weight: 500;
+            text-align: center;
+
+            &.inactive {
+              background-color: #545f7d1f;
+              color: var(--primary-color);
+            }
+            &.pending {
+              background-color: #e9b3002a;
+              color: #E9B200;
+            }
+            &.active {
+              background-color: #39cd6325;
+              color: #39CD62;
+            }
+            &.blacklisted {
+              background-color: #e4033b27;
+              color: #E4033B;
+            }
+          }
+
+          .ulList {
+            z-index: 1000;
+            padding: 1.2rem 0.5rem;
+            align-items: left;
+            border-radius: 4px;
+            justify-content: center;
+            gap: 1rem;
+            box-shadow: 3px 5px 20px 0px #0000000A;
+            border: 1px solid #545F7D0A;
+
+            li {
+              font-weight: var(--regular);
+              font-size: 14px;
+              color: var(--senary-color);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .pagination {
+    justify-content: space-between;
+
+    .paginationButtons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .modal {
+    position: absolute;
+    top: 33%;
+    left: 2%;
+    width: 100%;
+    z-index: 1000; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 10px; 
+    display: none; 
+  }
+  .showModal {
+    display: block; 
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+  }
+  
+  .paginationInfo,
+  .tableInfo {
+    font-size: 14px;
+    color: var(--text-color2);
+  }
+
+  .paginationInfo 
+   select {
+     background-color: #213F7D1A;
+     padding: 0.3rem;
+     border-radius: 4px;
+     border: none;
+  }
+
+  .tableInfo {
+    padding: 1rem 0.5rem;
+  }
+  
+  .paginationButtons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .paginationButtons button {
+    border: none;
+    background: #fff;
+    margin: 0 2px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .paginationButtons button:hover {
+    background: #007bff;
+    color: #fff;
+  }
+  
+  .paginationButtons .active {
+    background: #007bff;
+    color: #fff;
+  }
+  
+  .paginationButtons .ellipsis {
+    padding: 8px 12px;
+    color: #999;
+  }
+  
+  .paginationButtons svg {
+    width: 16px;
+    height: 16px;
+    fill: #007bff;
+    transition: fill 0.3s;
+  }
+  
+}
