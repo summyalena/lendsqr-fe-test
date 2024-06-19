@@ -43,11 +43,10 @@ export function TextArea({ label, ...props }: InputProps) {
   return (
     <div className={`${styles.textField}`}>
       <label htmlFor={props.name}>{label}</label>
-      <textarea
-        className={meta.touched && meta.error ? 'invalid' : ''}
+      <TextArea
+        label={''} className={meta.touched && meta.error ? 'invalid' : ''}
         {...field}
-        {...props}
-      />
+        {...props}      />
       {meta.touched && meta.error ? (
         <div className={styles.invalid}>{meta.error}</div>
       ) : null}
