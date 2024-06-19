@@ -1,0 +1,62 @@
+.navContainer {
+  padding: 1rem 3rem;
+  justify-content: space-between;
+  height: 100px;
+  background-color: #fff;
+  align-items: center;
+  padding: 0 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 3px 0px 20px 0px #0000000A;
+
+
+  span {
+    form {
+      width: 400px;
+      height: 40px;
+      display: flex;
+      border-radius: 8px;
+      opacity: 0.2px;
+      margin-left: 2rem;
+
+      button {
+        background-color: var(--quaternary-color);
+        width: 56px;
+        height: 40px;
+        border-radius: 0;
+        border-top-right-radius: 0.2rem;
+        border-bottom-right-radius: 0.2rem;
+      }
+    }
+  }
+
+  .firstContent {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .secondContent {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 768px) {
+  
+    padding: 0 10px;
+
+    span {
+      form {
+        display: none;
+      }
+    }
+
+    .secondContent {
+      gap: 0.3rem;
+    }
+  }
+}
