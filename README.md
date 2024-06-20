@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Certainly! Here's a detailed documentation for your Next.js codebase:
+
+---
+
+# Project Documentation
+
+## Overview
+
+This project is built using Next.js, a React framework that provides several advantages over traditional React applications:
+
+- **Server-side rendering (SSR)**: Next.js supports SSR out of the box, which enhances SEO and provides faster initial page loads by rendering pages on the server.
+  
+- **Automatic code splitting**: Next.js automatically splits code bundles, ensuring that only necessary JavaScript is loaded, optimizing performance.
+
+- **File-based routing**: Next.js uses a file-based routing system, making it intuitive to create and organize routes within the `pages` directory.
+
+## Technologies Used
+
+- **Next.js**: Chosen for its SSR capabilities and simplified routing compared to React.js.
+  
+- **Sass**: Used for styling due to its advanced features like variables and nesting, enhancing maintainability and scalability.
+
+- **IndexedDB**: Utilized for storing user details and authentication data locally, ensuring data persistence and offline access.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+Ensure you have Node.js and npm installed on your machine.
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone <repository-url>
+   cd <project-directory>
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+### Running the App
+
+To run the application in development mode:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This command starts the development server. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Folder Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The project follows a structured organization:
 
-## Learn More
+- **`components/ui`**: Contains reusable UI components used across the application.
 
-To learn more about Next.js, take a look at the following resources:
+- **`utils/component`**: Houses IndexedDB for storing user authentication and details.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **`protectedRoute` and `authContext` files**: Implements authentication mechanisms to secure routes and manage user sessions.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **`pages/page.tsx`**: The main entry point (`dashboard`), displaying the core content of the application.
 
-## Deploy on Vercel
+- **`dashboard/layout`**: Provides a layout structure for the dashboard content.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Authentication Flow
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. **Signup**: Users must register to access the application.
+
+2. **Sign In**: After signup, users log in to authenticate themselves.
+
+3. **Dashboard**: Upon successful authentication, users are directed to the dashboard where they can access application features.
+
+### Additional Notes
+
+- Ensure to explore the `components/ui` folder for reusable components and `utils/component` for IndexedDB integration details.
+
+- Authentication and route protection are managed through `protectedRoute` and `authContext`, ensuring a secure user experience.
+
+## Deployment
+
+For deployment, consider using the [Vercel Platform](https://vercel.com/) (recommended for Next.js projects) for seamless deployments and scaling.
+
+---
+
+Feel free to expand this documentation further based on additional features, configurations, or specific details relevant to your project. This structured approach will help users understand and effectively utilize your Next.js application.
