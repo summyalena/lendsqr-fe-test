@@ -25,11 +25,6 @@ const UserDetailsPage = ({ params }: { params: { username: string } }) => {
     
     loadUserData();
   }, [params.username, fetchData, router]);
-
- useEffect(() => {
-  console.log(apiData);
- 
- }, [])
  
 
   if (loading) {
