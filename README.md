@@ -77,7 +77,7 @@ The project follows a structured organization:
 
 ### Additional Notes
 
-- Ensure to explore the `components/ui` folder for reusable components and `utils/component` for IndexedDB integration details.
+- Ensure to explore the `components/ui` folder for reusable components and `utils/components` for IndexedDB integration details.
 
 - Authentication and route protection are managed through `protectedRoute` and `authContext`, ensuring a secure user experience.
 

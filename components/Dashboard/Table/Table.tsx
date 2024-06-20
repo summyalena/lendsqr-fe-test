@@ -61,9 +61,10 @@ const Table: React.FC = () => {
     setFilterPosition(null);
   };
 
-  const handleResetFilter = (column: string, value: string) => {
-    console.log(`Filter applied to ${column}: ${value}`);
+  const handleResetFilter = () => {
+    console.log('Resetting filters...');
   };
+  
 
   const handlePagination = (page: number) => {
     setCurrentPage(page);
