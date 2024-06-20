@@ -24,7 +24,7 @@ interface ApiContextType {
   apiData: User[];
   fetchData: () => Promise<void>;
   filterData: (search: string, key: string) => void;
-  filterDataByOptions: (options: FilterCriteria) => void;
+  filterDataByOptions: (options: FilterCriteria) => {};
 }
 
 interface FilterCriteria {
@@ -37,7 +37,7 @@ interface FilterCriteria {
   status?: string;
 }
 
-const ApiContext = createContext<ApiContextType | undefined>(undefined);
+const ApiContext = createContext<ApiContextType | {}>({});
 
 export const ApiProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
@@ -77,7 +77,7 @@ export const ApiProvider: React.FC<{ children: React.ReactNode }> = ({
     let filteredData = allUsers.current;
     let result: User[] = [];
 
-    for (const key in options as FilterCriteria) {
+    for (const key in options) {
       console.log(key, options[key]);
       if (options[key]) {
         if (key === 'date') {
@@ -118,7 +118,7 @@ export const ApiProvider: React.FC<{ children: React.ReactNode }> = ({
 };
 
 export const useApi = () => {
-  const context = useContext(ApiContext);
+  const context = useContext(ApiContext) as ApiContextType;
   if (!context) {
     throw new Error('useApi must be used within an ApiProvider');
   }

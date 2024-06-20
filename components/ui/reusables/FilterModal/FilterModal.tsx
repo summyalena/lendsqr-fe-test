@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import styles from './filtermodal.module.scss';
 
-import ApiContext from '@/components/utils/context/apiContext';
+import { useApi } from '@/components/utils/context/apiContext';
 
 type Props = {
   column: string;
@@ -10,7 +10,7 @@ type Props = {
 };
 
 function FilterModal({ column, onClose, onReset }: Props) {
-  const { filterDataByOptions } = useContext(ApiContext);
+  const { filterDataByOptions } = useApi();
 
   const [filters, setFilters] = useState({
     organization: '',
