@@ -60,8 +60,10 @@ $regular: var(--regular);
 
 @media screen and (min-width: 768px) {
   .authWrapper {
+    gap: 0;
+
     img {
-      display:flex;
+      display: flex;
     }
   }
 }

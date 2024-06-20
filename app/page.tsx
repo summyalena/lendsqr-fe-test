@@ -10,11 +10,9 @@ import Dashboard from '../components/Dashboard/Dashboard';
 
 function page() {
   return (
-    // <LayoutWithAuth>
       <ProtectedRoute>
         <Dashboard />
         </ProtectedRoute>
-    // </LayoutWithAuth>
   );
 }
 
