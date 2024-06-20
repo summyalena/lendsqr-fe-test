@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './UserTag.module.scss';
-import { UserActiveIcon } from '@/public/icons/icons';
-import { UsersLoanIcon } from '@/public/icons/icons';
-import { UsersSavingsIcon } from '@/public/icons/icons';
+import {UserActiveIcon} from '@/public/icons/icons';
+import {UsersLoanIcon} from '@/public/icons/icons';
+import {UsersSavingsIcon} from '@/public/icons/icons';
 
 const icons = {
   activeUsers: UserActiveIcon,
@@ -10,16 +10,8 @@ const icons = {
   savings: UsersSavingsIcon,
 };
 
-function UserTag({
-  tag,
-  figures,
-  iconType,
-}: {
-  tag: string;
-  figures: number;
-  iconType: 'activeUsers' | 'loans' | 'savings';
-}) {
-  const IconComponent = icons[iconType] as React.ComponentType<{ className: string }>;
+function UserTag({tag, figures, iconType}: {tag: string; figures: number; iconType: 'activeUsers' | 'loans' | 'savings'}) {
+  const IconComponent = icons[iconType] as React.ComponentType<{className: string}>;
 
   return (
     <div className={`${styles.tagContainer}`}>

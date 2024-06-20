@@ -219,7 +219,7 @@ const Table: React.FC = () => {
                     }>
                     <ul className={`flex flex-col ${styles.ulList}`}>
                       <li style={{cursor: 'pointer'}}>
-                        <Link href={`/user/${encodeURIComponent(user.username)}`}>
+                        <Link href={`/user/${user.username}`}>
                             <EyeIcon /> View Details
                         </Link>
                       </li>
