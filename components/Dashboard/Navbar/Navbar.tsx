@@ -23,7 +23,7 @@ function Navbar() {
 
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    filterData(searchTerm, 'username'); // Assuming you want to search by username
+    filterData(searchTerm, 'username'); 
   };
 
   return (

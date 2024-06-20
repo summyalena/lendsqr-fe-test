@@ -28,10 +28,6 @@ Ensure you have Node.js and npm installed on your machine.
 
 1. Clone the repository:
 
-   ```bash
-   git clone <repository-url>
-   cd <project-directory>
-   ```
 
 2. Install dependencies:
 
@@ -78,9 +74,4 @@ The project follows a structured organization:
 - Authentication and route protection are managed through `protectedRoute` and `authContext`, ensuring a secure user experience.
 
 ## Deployment
-
-For deployment, consider using the [Vercel Platform](https://vercel.com/) (recommended for Next.js projects) for seamless deployments and scaling.
-
----
-
-Feel free to expand this documentation further based on additional features, configurations, or specific details relevant to your project. This structured approach will help users understand and effectively utilize your Next.js application.
+- I used vercel to deploy th web app
