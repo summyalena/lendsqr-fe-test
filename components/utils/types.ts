@@ -5,7 +5,7 @@ export interface User {
 }
 
 export interface UserDetailsProps {
-  user: string;
+  username: string;
 }
 
 export interface User {
