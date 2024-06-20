@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import { SearchIcon } from '@/public/icons/icons';
 import { LendsqrLogo, NotificationIcon, SignOutIcon, DropDown } from '@/public/icons/icons';
 import styles from './navbar.module.scss';
