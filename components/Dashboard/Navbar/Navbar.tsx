@@ -1,27 +1,29 @@
-'use client';
-
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
-import { DropDown, LendsqrLogo, NotificationIcon, SignOutIcon } from '@/public/icons/icons';
+import { useRouter } from 'next/router';
 import { SearchIcon } from '@/public/icons/icons';
+import { LendsqrLogo, NotificationIcon, SignOutIcon, DropDown } from '@/public/icons/icons';
 import styles from './navbar.module.scss';
 import Avatar from '@/public/icons/avatar.svg';
 import PopOver from '@/components/ui/reusables/PopOver/PopOver';
 import { useAuth } from '@/components/utils/context/authContext';
+import { useApi } from '@/components/utils/context/apiContext';
 
 function Navbar() {
+  const { apiData, filterData } = useApi();
   const router = useRouter();
   const { signOut } = useAuth();
+  const [searchTerm, setSearchTerm] = useState('');
 
   const handleSignOut = () => {
     signOut();
     router.push('/Login');
   };
 
-  function handleSearch(searchTerm: any) {
-    throw new Error('Function not implemented.');
-  }
+  const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    filterData(searchTerm, 'username'); // Assuming you want to search by username
+  };
 
   return (
     <nav className={`flex ${styles.navContainer}`}>
@@ -30,6 +32,7 @@ function Navbar() {
         <span>
           <form
             className={`full-width align-y flex ${styles.searchBar}`}
+            onSubmit={handleSearch}
             id="search-bar"
             role="search"
             aria-label="Search for products"
@@ -40,8 +43,10 @@ function Navbar() {
               placeholder="Search"
               aria-label="Search for products"
               autoComplete="off"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
             />
-            <button>
+            <button type="submit">
               <SearchIcon />
             </button>
           </form>

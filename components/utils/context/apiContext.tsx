@@ -1,12 +1,4 @@
-'use client';
-
-import React, {
-  createContext,
-  useContext,
-  useState,
-  useEffect,
-  useRef,
-} from 'react';
+import React, { createContext, useContext, useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 
 export interface User {
@@ -24,7 +16,7 @@ interface ApiContextType {
   apiData: User[];
   fetchData: () => Promise<void>;
   filterData: (search: string, key: string) => void;
-  filterDataByOptions: (options: FilterCriteria) => {};
+  filterDataByOptions: (options: FilterCriteria) => void;
 }
 
 interface FilterCriteria {
@@ -68,8 +60,6 @@ export const ApiProvider: React.FC<{ children: React.ReactNode }> = ({
       user[key].toLowerCase().includes(search.toLowerCase())
     );
 
-    if (!filteredData) return;
-
     setApiData(filteredData);
   };
 
@@ -78,7 +68,6 @@ export const ApiProvider: React.FC<{ children: React.ReactNode }> = ({
     let result: User[] = [];
 
     for (const key in options) {
-      console.log(key, options[key]);
       if (options[key]) {
         if (key === 'date') {
           result = filteredData.filter((user: User) =>
@@ -102,6 +91,8 @@ export const ApiProvider: React.FC<{ children: React.ReactNode }> = ({
               .includes(options[key]!.toLowerCase().trim())
           );
         }
+
+        filteredData = result; // Update filteredData for subsequent filters
       }
     }
 
