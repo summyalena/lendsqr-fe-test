@@ -2,26 +2,101 @@
   padding: 20px;
   background-color: #ffffff;
   border-radius: 8px;
+  margin-top: -2rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
+  a {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 14px;
+    align-items: center;
+    color: var(--text-color2);
+  }
+
+  .user {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 16px;
+    color: #213F7D;
+    font-family: 'Work Sans', sans-serif;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .buttons > button {
+    padding: 0.5rem;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: var(--bold);
+    cursor: pointer;
+  }
+
+  .buttons > button:first-child {
+    color: #E4033B;
+    border: 1px solid #E4033B;
+  }
+
+  .buttons > button:last-child {
+    color: #39CDCC;
+    border: 1px solid #39CDCC;
   }
 
   .section {
-    margin-bottom: 30px;
+    margin-top: 1rem;
 
     h2 {
-      font-size: 20px;
+      font-size: 16px;
+      color: var(--senary-color);
       margin-bottom: 10px;
-      border-bottom: 1px solid #e0e0e0;
       padding-bottom: 5px;
+      border-bottom: 1px solid #e0e0e0;
     }
 
     p {
       margin: 5px 0;
       font-size: 16px;
+      color: var(--text-color2);
+      font-family: 'Work Sans', sans-serif;
+
+      span {
+        color: #545F7D;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .firstcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e0e0e0;
+
+    span {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    h3 {
+      font-weight: 500;
+      font-size: 22px;
+      font-family: 'Work Sans', sans-serif;
+      color: var(--text-color2);
+    }
+
+    p {
+      font-size: 12px;
+      font-weight: var(--regular);
+      font-family: 'Work Sans', sans-serif;
     }
   }
 }
@@ -50,5 +125,58 @@
   .socials,
   .guarantor {
     grid-template-columns: 1fr;
+  }
+
+  .userDetails {
+    padding: 15px;
+    margin-top: -1rem;
+  }
+
+  .section {
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+
+    button {
+      width: 100%;
+    }
+  }
+
+  .firstcontainer {
+    flex-direction: column;
+    align-items: flex-start;
+
+    h3 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .userDetails {
+    padding: 10px;
+  }
+
+  .section {
+    h2 {
+      font-size: 14px;
+    }
+
+    p {
+      font-size: 12px;
+
+      span {
+        font-size: 10px;
+      }
+    }
   }
 }
