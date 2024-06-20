@@ -33,24 +33,6 @@ const Table: React.FC = () => {
     fetchData();
   }, [currentPage, itemsPerPage]);
 
-  // const fetchData = async () => {
-  //   try {
-  //     const response = await axios.get(`https://run.mocky.io/v3/26db791b-2fb3-4b73-b4a2-2995d365b3ef`);
-  //     const data = response.data;
-
-  //     const startIndex = (currentPage - 1) * itemsPerPage;
-  //     const slicedData = data.slice(startIndex, startIndex + itemsPerPage);
-
-  //     setUsers(slicedData);
-
-  //     const totalItems = data.length;
-  //     const totalPages = Math.ceil(totalItems / itemsPerPage);
-  //     setTotalPages(totalPages);
-  //   } catch (error) {
-  //     console.error('Error fetching data:', error);
-  //   }
-  // };
-
   const { apiData, fetchData } = useApi();
 
   useEffect(() => {
@@ -219,7 +201,11 @@ const Table: React.FC = () => {
                     }>
                     <ul className={`flex flex-col ${styles.ulList}`}>
                       <li style={{cursor: 'pointer'}}>
-                        <Link href={`/user/${user.username}`}>
+                        <Link href={{pathname: `/user/${user.username}`,
+            query: {
+              name: user.createdAt,
+              creatorId: user.phone,
+            },}}>
                             <EyeIcon /> View Details
                         </Link>
                       </li>
