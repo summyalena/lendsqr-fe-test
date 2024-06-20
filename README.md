@@ -1,7 +1,3 @@
-Certainly! Here's a detailed documentation for your Next.js codebase:
-
----
-
 # Project Documentation
 
 ## Overview
