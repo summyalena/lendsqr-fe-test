@@ -27,9 +27,9 @@ Ensure you have Node.js and npm installed on your machine.
 ### Installation
 
 1. Clone the repository:
+git clone https://github.com/summyalena/lendsqr-fe-test
 
-
-2. Install dependencies:
+3. Install dependencies:
 
    ```bash
    npm install
@@ -75,3 +75,7 @@ The project follows a structured organization:
 
 ## Deployment
 - I used vercel to deploy th web app
+
+https://docs.google.com/document/d/1gs-PK-mHqs1GM3N0aV70pCF0ndb6xBdBR-5uIR7NRHI/edit
+
+attached here is the document that shows what i've done so far. 
