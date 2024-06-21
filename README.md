@@ -78,4 +78,4 @@ The project follows a structured organization:
 
 https://docs.google.com/document/d/1gs-PK-mHqs1GM3N0aV70pCF0ndb6xBdBR-5uIR7NRHI/edit
 
-attached here is the document that shows what i've done so far. 
+attached here is the document that shows what i have done so far.
